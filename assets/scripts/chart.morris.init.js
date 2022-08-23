@@ -103,7 +103,23 @@
 					],
 					xkey: 'x',
 					ykeys: ['y', 'z','a'],
-					labels: ['Series A', 'Series B','Series C']
+					options: {
+						legend: {
+						  display: false
+						},
+						scales: {
+						  xAxes: [
+							{
+							ticks: {
+								  autoSkip: false,
+								  maxRotation: 0,
+								  minRotation: 0
+							  }
+							}
+						  ]
+						}
+					  },
+                    labels: ['Series A','Series B','Series C']
 				});
 				return false;
 			},

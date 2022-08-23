@@ -309,7 +309,7 @@
 						switch (type){
 							case "circle": 
 								options = {
-									chartArea:{left:0,top:0,width:'100%',height:'75%'},
+									chartArea:{left:0,top:0,width:'100%',height:'85%'},
 									colors: ["#304ffe", "#f60e0e","#ffa000"],
 									fontName: 'Poppins',
 									backgroundColor: themes,
@@ -339,7 +339,7 @@
 							case "donut": 
 								options = {
 									pieHole: 0.3,
-									chartArea:{left:0,top:0,width:'100%',height:'85%'},
+									chartArea:{left:0,top:0,width:'100%',height:'100%'},
 									legend:{
 										position: 'bottom',
 										textStyle: {
@@ -354,7 +354,7 @@
 								break;
 							case "column":
 								options = {
-									chartArea:{left:30,top:10,width:'100%',height:'90%'},
+									chartArea:{left:30,top:10,width:'100%',height:'100%'},
 									colors: ["#304ffe"],
 									fontName: 'Poppins',
 									backgroundColor: themes,
@@ -451,7 +451,7 @@
 						switch (type){
 							case "circle": 
 								options = {
-									chartArea:{left:0,top:0,width:'100%',height:'75%'},
+									chartArea:{left:0,top:0,width:'100%',height:'90%'},
 									legend:{
 										position: 'bottom'
 									},
@@ -464,7 +464,7 @@
 							case "donut": 
 								options = {
 									pieHole: 0.3,
-									chartArea:{left:0,top:0,width:'100%',height:'75%'},
+									chartArea:{left:0,top:0,width:'100%',height:'90%'},
 									legend:{
 										position: 'bottom',
 									},

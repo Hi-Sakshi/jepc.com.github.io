@@ -27,33 +27,33 @@
 	ChartJs = {
 		bar: function(container,position,type){
 			var barChartData = {
-					labels: ["January", "February", "March", "April"],
-					datasets: [{
-						label: 'Dataset 1',
-						backgroundColor: "rgba(249,200,81,0.3)",
-						borderColor: "rgb(249, 200, 81)",
-						borderWidth: 1,
-						hoverBackgroundColor: "rgba(249,200,81,0.6)",
-						hoverBorderColor: "rgb(249, 200, 81)",
-						data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-					}, {
-						label: 'Dataset 2',
-						backgroundColor: "rgba(127, 193, 252, 0.3)",
-						borderColor: "#7fc1fc",
-						borderWidth: 1,
-						hoverBackgroundColor: "rgba(127, 193, 252, 0.6)",
-						hoverBorderColor: "#7fc1fc",
-						data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-					}, {
-						label: 'Dataset 3',
-						backgroundColor: "rgba(245,112,122,0.3)",
-						borderColor: "#f5707a",
-						borderWidth: 1,
-						hoverBackgroundColor: "rgba(245,112,122,0.6)",
-						hoverBorderColor: "#f5707a",
-						data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-					}]
-				};
+				labels: ["Garhwa", "Gamla", "Khunti", "Latehar", "Lohardaga", "Palamu", "Paschimi Singhbum", "Purbi Singhbum", "Ramgarh", "Ranchi", "Saraikela Kharswan", "Simdega"],
+				datasets: [{
+					label: 'Theory',
+					backgroundColor: "rgba(249,200,81,0.3)",
+					borderColor: "rgb(249, 200, 81)",
+					borderWidth: 1,
+					hoverBackgroundColor: "rgba(249,200,81,0.6)",
+					hoverBorderColor: "rgb(249, 200, 81)",
+					data: [97,262,102,38,104,19,34,63,202,201,175,173]
+				}, {
+					label: 'Practical',
+					backgroundColor: "rgba(127, 193, 252, 0.3)",
+					borderColor: "#7fc1fc",
+					borderWidth: 1,
+					hoverBackgroundColor: "rgba(127, 193, 252, 0.6)",
+					hoverBorderColor: "#7fc1fc",
+					data: [74,237,79,51,91,57,72,76,212,220,194,147]
+				}, {
+					label: 'Multimedia',
+					backgroundColor: "rgba(245,112,122,0.3)",
+					borderColor: "#f5707a",
+					borderWidth: 1,
+					hoverBackgroundColor: "rgba(245,112,122,0.6)",
+					hoverBorderColor: "#f5707a",
+					data: [23,25,23,13,13,38,53,38,187,19,168,26]
+				}]
+			};
 
 			var ctx = document.getElementById(container).getContext("2d"),
 				skip = (type == "bar") ? "bottom" : "left" ;

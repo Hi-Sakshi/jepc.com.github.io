@@ -141,6 +141,7 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
+				
 				<h5 class="title">Reports</h5>
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-gear"></i><span>ICT Instructor</span><span class="menu-arrow fa fa-angle-down"></span></a>
@@ -178,7 +179,10 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
-				<h5 class="title"><a href="#">Configuration</a></h5>
+				<li>
+					<a class="waves-effect" href="#"><i class="menu-icon fa fa-circle"></i><span>Configuration</span></a>
+				</li>
+				
 				
 			<!-- /.menu js__accordion -->
 		</div>
@@ -198,8 +202,8 @@
 	<div class="pull-right">
 		
 		
-		<h4 class="page-title">Logout</h4>
-		<a href="index.html" class="ico-item fa fa-power-off"></a>
+		<a href="index.html" class="ico-item fa fa-power-off" h4 class="page-title"> - Logout</a></h4>
+		
 	</div>
 	<!-- /.pull-right -->
 </div>
@@ -370,11 +374,11 @@
 			</div>
 			<!-- /.col-lg-3 col-md-6 col-xs-12 -->
 			
-			<h4 class="name">Activity Line Graph</h4>
+			<h4 class="name">ICT Instructors' Attendance Trend</h4>
 			<div class="col-xs-12">
 				<div class="box-content">
 					
-					<h4 class="box-title">ICT Instructors' Attendance Trend</h4>
+					
 					<!-- /.box-title -->
 					<div class="dropdown js__drop_down">
 						<a href="#" class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
@@ -395,43 +399,11 @@
 				<!-- /.box-content -->
 			</div>
 
-			<h4 class="name">Statistics Bar Graph</h4>
-			<div class="col-xs-12">
+
+            <h4 class="name">District Wise Lab Usage</h4>
+			<div class="col-md-12">
 				<div class="box-content">
-					<h4 class="box-title">District Wise Lab Usage</h4>
-					<!-- /.box-title -->
-					<div class="dropdown js__drop_down">
-						<a href="#" class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
-						<ul class="sub-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else there</a></li>
-							<li class="split"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-						<!-- /.sub-menu -->
-					</div>
-					<!-- /.dropdown js__dropdown -->
 					
-					<div id="bar-morris-chart" class="morris-chart" style="height: 400px"></div>
-					<div class="text-center">
-						<ul class="list-inline morris-chart-detail-list">
-							<li><i class="fa fa-circle"></i>Theory</li>
-							<li><i class="fa fa-circle"></i>Practical</li>
-							<li><i class="fa fa-circle"></i>Multimedia</li>
-						</ul>
-					</div>
-					<!-- /.content -->
-					<h4 class="box-title" style="text-align:center">Number of Sessions over District</h4>
-				</div>
-				<!-- /.box-content -->
-			</div>
-			<!-- /.col-lg-4 col-md-12 -->
-
-			
-			<div class="col-xs-12">
-				<div class="box-content">
-					<h4 class="box-title">Complaint Log Summary</h4>
 					<!-- /.box-title -->
 					<div class="dropdown js__drop_down">
 						<a href="#" class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
@@ -445,20 +417,11 @@
 						<!-- /.sub-menu -->
 					</div>
 					<!-- /.dropdown js__dropdown -->
-					<div id="lines-morris-chart" class="morris-chart" style="height: 320px"></div>
-					<div class="text-center">
-						<ul class="list-inline morris-chart-detail-list">
-							<li><i class="fa fa-circle"></i>Open Calls</li>
-							<li><i class="fa fa-circle"></i>Closed Calls</li>
-						</ul>
-					</div>
-					<!-- /#lines-morris-chart.morris-chart -->
+					<canvas id="bar-chartjs-chart" class="chartjs-chart" width="480" height="320"></canvas>
+					<!-- /#bar-chartjs-chart.chartjs-chart -->
 				</div>
 				<!-- /.box-content -->
 			</div>
-			<!-- /. col-xs-12 -->
-
-
 
 
 
@@ -479,7 +442,7 @@
 					</div>
 					<!-- /.dropdown js__dropdown -->
 					<div class="content">
-						<div id="chart-1" class="js__chart" data-type="donut" data-chart="'Type'/'Number' |'MIS Work'/8.9 |'Multimedia'/16.5 | 'Office Work'/28.8 | 'Practical'/24.8 | 'Theory'/21"></div>
+						<div id="chart-1" class="js__chart" data-type="donut" width="480" height="420" data-chart="'Type'/'Number' |'MIS Work'/8.9 |'Multimedia'/16.5 | 'Office Work'/28.8 | 'Practical'/24.8 | 'Theory'/21"></div>
 					</div>
 					<!-- /.content -->
 				</div>
@@ -606,117 +569,117 @@
 							<thead>
 								<tr>
 									<th style="width:20%;">Item Name</th>
-									<th align="right">Assets Installed</th>
-									<th align="right">Assets Running</th>
-									<th align="right">Assets Not Running</th>
-									<th align="right">Assets Stolen</th>
-									<th align="right">Assets on Standby</th>
+									<th>Assets Installed</th>
+									<th>Assets Running</th>
+									<th>Assets Not Running</th>
+									<th>Assets Stolen</th>
+									<th>Assets on Standby</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>UPS</td>
-									<td align="right">252</td>
-									<td align="right">242</td>
-									<td align="right">9</td>
-									<td align="right">4</td>
-									<td align="right">3</td>
+									<td>252</td>
+									<td>242</td>
+									<td>9</td>
+									<td>4</td>
+									<td>3</td>
 								</tr>
 								<tr>
 									<td>Projector</td>
-									<td align="right">252</td>
-									<td align="right">249</td>
-									<td align="right">0</td>
-									<td align="right">4</td>
-									<td align="right">1</td>
+									<td>252</td>
+									<td>249</td>
+									<td>0</td>
+									<td>4</td>
+									<td>1</td>
 								</tr>
 								<tr>
 									<td>TFT</td>
-									<td align="right">2771</td>
-									<td align="right">2724</td>
-									<td align="right">1</td>
-									<td align="right">63</td>
-									<td align="right">17</td>
+									<td>2771</td>
+									<td>2724</td>
+									<td>1</td>
+									<td>63</td>
+									<td>17</td>
 								</tr>
 								<tr>
 									<td>Genset</td>
-									<td align="right">152</td>
-									<td align="right">151</td>
-									<td align="right">0</td>
-									<td align="right">1</td>
-									<td align="right">0</td>
+									<td>152</td>
+									<td>151</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Switch</td>
-									<td align="right">252</td>
-									<td align="right">252</td>
-									<td align="right">0</td>
-									<td align="right">1</td>
-									<td align="right">1</td>
+									<td>252</td>
+									<td>252</td>
+									<td>0</td>
+									<td>1</td>
+									<td>1</td>
 								</tr>
 								<tr>
 									<td>CPU</td>
-									<td align="right">254</td>
-									<td align="right">248</td>
-									<td align="right">2</td>
-									<td align="right">4</td>
-									<td align="right">0</td>
+									<td>254</td>
+									<td>248</td>
+									<td>2</td>
+									<td>4</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Thin Client</td>
-									<td align="right">2544</td>
-									<td align="right">2506</td>
-									<td align="right">3</td>
-									<td align="right">66</td>
-									<td align="right">31</td>
+									<td>2544</td>
+									<td>2506</td>
+									<td>3</td>
+									<td>66</td>
+									<td>31</td>
 								</tr>
 								<tr>
 									<td>Site Preparation</td>
-									<td align="right">252</td>
-									<td align="right">252</td>
-									<td align="right">0</td>
-									<td align="right">0</td>
-									<td align="right">0</td>
+									<td>252</td>
+									<td>252</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Printer</td>
-									<td align="right">252</td>
-									<td align="right">250</td>
-									<td align="right">0</td>
-									<td align="right">3</td>
-									<td align="right">1</td>
+									<td>252</td>
+									<td>250</td>
+									<td>0</td>
+									<td>3</td>
+									<td>1</td>
 								</tr>
 								<tr>
 									<td>Multimedia Content</td>
-									<td align="right">252</td>
-									<td align="right">252</td>
-									<td align="right">0</td>
-									<td align="right">0</td>
-									<td align="right">0</td>
+									<td>252</td>
+									<td>252</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Furniture</td>
-									<td align="right">252</td>
-									<td align="right">252</td>
-									<td align="right">0</td>
-									<td align="right">0</td>
-									<td align="right">0</td>
+									<td>252</td>
+									<td>252</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Speaker</td>
-									<td align="right">252</td>
-									<td align="right">249</td>
-									<td align="right">1</td>
-									<td align="right">2</td>
-									<td align="right">0</td>
+									<td>252</td>
+									<td>249</td>
+									<td>1</td>
+									<td>2</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Stabilizer</td>
-									<td align="right">252</td>
-									<td align="right">251</td>
-									<td align="right">0</td>
-									<td align="right">1</td>
-									<td align="right">0</td>
+									<td>252</td>
+									<td>251</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
 								</tr>
 							</tbody>
 						</table>
@@ -767,6 +730,10 @@
 	<!-- Chartist Chart -->
 	<script src="assets/plugin/chart/chartist/chartist.min.js"></script>
 	<script src="assets/scripts/chart.chartist.init.min.js"></script>
+
+	<!-- chart.js Chart -->
+	<script src="assets/plugin/chart/chartjs/Chart.bundle.min.js"></script>
+	<script src="assets/scripts/chart.chartjs.init.min.js"></script>
 
 	<!-- FullCalendar -->
 	<script src="assets/plugin/moment/moment.js"></script>
